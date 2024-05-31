@@ -1,0 +1,220 @@
+.footer-parent {
+    background-image: url("../Assets/Images/Footer.png");
+    height: 60vh;
+    /* padding: 50px 0px 12px 0px; */
+    margin-top: 100px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-top: 1px solid #bdbdbd;
+}
+
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.footer-logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer-head p {
+    color: #000000;
+    font-size: 20px;
+    font-family: "manrope-bold";
+    font-weight: bold;
+    margin-bottom: 28px;
+}
+
+.footer-list ul {
+    padding-left: 0px;
+}
+
+.footer-list ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-list ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "manrope-regular";
+}
+
+.footer-list .footer-icon {
+    color: #000000;
+    font-size: 25px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 30px;
+}
+
+.hr-tag {
+    color: #000000;
+}
+
+.footer-rights {
+    text-align: center;
+}
+
+.footer-rights p {
+    color: #000000;
+    font-family: "robot-light";
+}
+
+.footer-cnt-list {
+    margin-bottom: 40px;
+}
+
+.footer-cnt-list li a {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    font-family: "manrope-regular";
+}
+
+.footer-cnt-list li a p {
+    margin-bottom: 0px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-list li {
+    flex: 50%;
+}
+
+.padding-footer {
+    padding: 30px 10px;
+}
+
+.footer-cnt-list li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-cnt-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-cnt-list {
+    padding-left: 0px;
+}
+
+
+.subscribe-footer {
+    border: 1px solid #bdbdbd;
+    border-radius: 25px;
+    height: 50px;
+    /* width: 340px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    position: relative;
+}
+
+.subscribe-footer input {
+    height: 100%;
+    /* width: 400px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding-left: 5px;
+
+}
+.subcriber-btn {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+button.sub-btn {
+    border: none;
+    outline: none;
+    background-color: #000000;
+    color: #ffffff;
+    height: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transition: 0.5s;
+    width: 100%;
+
+}
+
+button.sub-btn:hover {
+    background-color: #bdbdbd;
+    color: #000000;
+}
+
+.no-ads p {
+ font-family: "manrope-regular";
+}
+
+.follow-head p{
+margin-bottom: 8px;
+font-family: "manrope-bold";
+font-size: 20px;
+}
+
+.cont-num a p{
+    font-size: 16px;
+    color: #000000;
+    font-family: "manrope-regular";
+}
+
+.payment-method {
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+}
+
+.method {
+    border: 1px solid #bdbdbd;
+    padding: 10px;
+    width: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.method img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+@media screen and (max-width:991px ) {
+    
+    .footer-parent {
+       height: 100%;
+    }
+
+    .service-list li {
+        flex: 100%;
+    }
+}

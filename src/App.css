@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "manrope-regular";
+  src: url("./Components/Assets/Fonts/Manrope-Regular.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+  font-family: "manrope-medium";
+  src: url("./Components/Assets/Fonts/Manrope-Medium.ttf");
+}
+
+@font-face {
+  font-family: "manrope-bold";
+  src: url("./Components/Assets/Fonts/Manrope-Bold.ttf");
+}
+
+@font-face {
+  font-family: "manrope-extrabold";
+  src: url("./Components/Assets/Fonts/Manrope-ExtraBold.ttf");
+}
+
+
+.dark-theme  {
+  --clr:#ffffff;
+  --background:#000000;
+}
+
+.light-theme  {
+    --clr:#000000;
+    --background:#ffffff;
   }
+  
+
+
+
+
+body {
+  background-color: var(--background) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Track */
+::-webkit-scrollbar-track {
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--list); 
+  border-radius: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd901; 
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px !important;
+  margin: 0 auto;
 }
