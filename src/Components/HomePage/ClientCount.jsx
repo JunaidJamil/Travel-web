@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useCountUp } from 'react-countup';
+
 const ClientCount = () => {
     const happyClientsRef = useRef(null);
     const destinationsRef = useRef(null);

@@ -42,7 +42,6 @@
 .logo {
     width: 120px;
     overflow: hidden;
-    padding: 10px;
 }
 
 .logo img {
@@ -53,7 +52,7 @@
 
 .nav-list {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     height: 100%;
 }
@@ -63,7 +62,7 @@
     justify-content: center;
     align-items: center;
     height: 70px;
-    gap: 30px;
+    gap: 15px;
     margin-bottom: 0px;
     padding-left: 0px;
 }
@@ -71,13 +70,14 @@
 .nav-list .navs li {
     list-style: none;
     color: #000000;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .nav-list .navs li a {
     text-decoration: none;
     color: #000000;
     font-family: "manrope-medium";
+    position: relative;
 }
 
 .nav-menu {
@@ -152,6 +152,11 @@ button.menu-btn {
     padding-top: 10px;
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
 .navs li a.active .title::before,
 .navs li a.active .title::after {
@@ -237,15 +242,46 @@ button.sign-in-btn {
 }
 
 
+.navs {
+    position: relative;
+}
+
+.nav-listing {
+    opacity: 0;
+    position: absolute;
+    background-color: #000;
+    color: #F2F4F6;
+    transition: opacity 0.3s ease;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 1;
+    width: 600px;
+    height: auto;
+}
+
+.navs li a:hover {
+    color: brown;
+}
+
+.navs li:hover .nav-listing {
+    opacity: 1;
+}
+
+
+
+  
 @media screen and (max-width:1366px) {
     .nav-list .navs li {
-        font-size: 15px;
+        font-size: 11px;
     }
 }
 
 @media screen and (max-width:1200px) {
     .navs {
-        gap: 20px;
+        gap: 10px;
+    }
+    .nav-list .navs li {
+        font-size: 13px;
     }
 }
 
@@ -254,7 +290,7 @@ button.sign-in-btn {
         font-size: 13px;
     }
     .navs {
-        gap: 20px;
+        gap: 8px;
     }
     
     .dropdown-container select {
@@ -264,10 +300,10 @@ button.sign-in-btn {
 
 @media screen and (max-width:1024px) {
     .nav-list .navs li {
-        font-size: 13px;
+        font-size: 12px;
     }
     .navs {
-        gap: 15px;
+        gap: 8px;
     }
     
     .dropdown-container select {

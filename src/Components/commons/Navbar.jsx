@@ -8,17 +8,18 @@ import "./Navbar.css";
 import { IoIosSunny } from "react-icons/io";
 import { CgMenuGridR } from "react-icons/cg";
 import { IoMoonSharp } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 const navItem = [
-    { navlist: "Home", href: "/" },
-    { navlist: "Tour", href: "/Tour" },
-    { navlist: "Destinations", href: "/Destinations" },
-    { navlist: "Activities", href: "/Activities" },
-    { navlist: "Hotels", href: "/Hotels" },
-    { navlist: "Rental", href: "/Rental" },
-    { navlist: "Tickets", href: "/Tickets" },
-    { navlist: "Pages", href: "/Pages" },
-    { navlist: "Blog", href: "/Blog" },
-    { navlist: "Contacts", href: "/Contacts" },
+    { navlist: "Home", href: "/", hoverText: "Welcome to Home" },
+    { navlist: "Tour", href: "/Tour", hoverText: "Explore Tours" },
+    { navlist: "Destinations", href: "/Destinations", hoverText: "Find Destinations" },
+    { navlist: "Activities", href: "/Activities", hoverText: "Enjoy Activities" },
+    { navlist: "Hotels", href: "/Hotels", hoverText: "Stay in Hotels" },
+    { navlist: "Rental", href: "/Rental", hoverText: "Rent a Car" },
+    { navlist: "Tickets", href: "/Tickets", hoverText: "Book Tickets" },
+    { navlist: "Pages", href: "/Pages", hoverText: "Additional Pages" },
+    { navlist: "Blog", href: "/Blog", hoverText: "Read our Blog" },
+    { navlist: "Contacts", href: "/Contacts", hoverText: "Contact Us" },
 ];
 
 export const Navbar = () => {
@@ -85,14 +86,14 @@ export const Navbar = () => {
             <nav className={`navigation ${navColor ? 'nav-bg' : ''} ${isVisible ? 'visible' : 'hidden'}`}>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-lg-2 col-md-6 col">
+                        <div className="col-lg-1 col-md-6 col">
                             <div className='logo-parent'>
                                 <div className="logo">
                                     <img src={logo} alt="Logo" />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-7 col-md-6 col">
+                        <div className="col-lg-8 col-md-6 col">
                             <div className='nav-list'>
                                 <ul className='navs'>
                                     {navItem.map((item, i) => (
@@ -102,8 +103,12 @@ export const Navbar = () => {
                                                 onClick={closeMenu}
                                                 className={({ isActive }) => isActive ? 'active' : ''}
                                             >
-                                                <span className="title">{item.navlist}</span>
+                                                <span className="title">{item.navlist} <IoIosArrowDown /></span>
+                                                <div className='nav-listing'>
+                                                    <h3>{item.hoverText}</h3>
+                                                </div>
                                             </NavLink>
+                                          
                                         </li>
                                     ))}
                                 </ul>
@@ -190,3 +195,6 @@ export const Navbar = () => {
 }
 
 export default Navbar;
+
+
+
